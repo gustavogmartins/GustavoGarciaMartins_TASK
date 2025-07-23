@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -36,12 +37,12 @@ public class Player : MonoBehaviour
     }
 
     private void OnRoll() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Keyboard.current.spaceKey.wasPressedThisFrame) {
             IsRolling = true;
             OnPlayerRoll?.Invoke();
         }
 
-        if (Input.GetKeyUp(KeyCode.Space)) {
+        if (Keyboard.current.spaceKey.wasReleasedThisFrame) {
             IsRolling = false;
         }
     }
