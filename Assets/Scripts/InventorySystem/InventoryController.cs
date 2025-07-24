@@ -16,12 +16,6 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    private void Start() {
-        foreach (GameObject inventorySlot in InventorySlot) {
-            inventorySlot.GetComponent<InventorySlotHandler>().SetEmptySlot(true);
-        }
-    }
-
     public void AddItem(Item item) {
         GameObject slot = TryToFindEmptySlot();
         if (slot == null) { return; }

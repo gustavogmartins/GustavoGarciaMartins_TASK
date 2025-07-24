@@ -41,4 +41,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler, IBe
     public Transform GetCurrentSlot() {
         return _currentSlot;
     }
+
+    public void SetCurrentSlot(Transform currentSlot) {
+        _currentSlot = currentSlot;
+    }
 }

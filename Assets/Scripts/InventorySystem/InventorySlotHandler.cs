@@ -4,49 +4,39 @@ using UnityEngine.UI;
 
 public class InventorySlotHandler : MonoBehaviour, IDropHandler
 {
-    public bool IsEmpty;
+    public bool IsEmpty => _currentSlotedItem == null;
     [SerializeField] private GameObject _currentSlotedItem;
 
     public void OnDrop(PointerEventData eventData) {
-        var item = eventData.pointerDrag;
+        var itemDragged = eventData.pointerDrag;
 
-        if (IsEmpty && item != null) {
-            item.transform.SetParent(this.transform);
-            item.GetComponent<Image>().raycastTarget = true;
-            item.transform.localPosition = new Vector3(0, 0, 0);
+        if (itemDragged == null) { return; }
 
-            var dragHandler = item.GetComponent<ItemDragHandler>();
-            dragHandler.SetDropped();
-            IsEmpty = false;
-            _currentSlotedItem = item;
+        var dragHandler = itemDragged.GetComponent<ItemDragHandler>();
+        Transform originalSlot = dragHandler.GetCurrentSlot();
+        var originalSlotHandler = originalSlot.GetComponent<InventorySlotHandler>();
 
-            Transform originalSlot = item.GetComponent<ItemDragHandler>().GetCurrentSlot();
-            originalSlot.GetComponent<InventorySlotHandler>().IsEmpty = true;
+        if (_currentSlotedItem != null) {
+            GameObject itemToSwap = _currentSlotedItem;
+
+            itemToSwap.transform.SetParent(originalSlot);
+            itemToSwap.transform.localPosition = Vector3.zero;
+            itemToSwap.GetComponent<ItemDragHandler>().SetCurrentSlot(originalSlot);
+            originalSlotHandler._currentSlotedItem = itemToSwap;
         } else {
-            Transform originalSlot = item.GetComponent<ItemDragHandler>().GetCurrentSlot();
-
-            _currentSlotedItem.transform.SetParent(originalSlot);
-            _currentSlotedItem.transform.localPosition = Vector3.zero;
-
-            item.transform.SetParent(this.transform);
-            item.GetComponent<Image>().raycastTarget = true;
-            item.transform.localPosition = Vector3.zero;
-
-            var dragHandler = item.GetComponent<ItemDragHandler>();
-            dragHandler.SetDropped();
-            IsEmpty = false;
-            _currentSlotedItem = item;
+            originalSlotHandler._currentSlotedItem = null;
         }
 
-    }
-
-    public void SetEmptySlot(bool isEmpty) {
-        IsEmpty = isEmpty;
+        itemDragged.transform.SetParent(this.transform);
+        itemDragged.transform.localPosition = Vector3.zero;
+        itemDragged.GetComponent<Image>().raycastTarget = true;
+        dragHandler.SetDropped();
+        dragHandler.SetCurrentSlot(this.transform);
+        _currentSlotedItem = itemDragged;
     }
 
     public void AddItem(GameObject item) {
         _currentSlotedItem = item;
-        IsEmpty = false;
     }
 
 }
