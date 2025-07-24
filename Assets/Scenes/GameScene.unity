@@ -28636,7 +28636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e2e18f75253de4fae9b86e0a302ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Inventory:
+  InventorySlot:
   - {fileID: 1034883109}
   - {fileID: 1628967467}
   - {fileID: 167124640}

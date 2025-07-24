@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class InventorySlotHandler : MonoBehaviour, IDropHandler
 {
-    public bool IsEmpty { get; private set; } = true;
+    public bool IsEmpty { get; private set; }
 
     public void OnDrop(PointerEventData eventData) {
         if (!IsEmpty) return;
