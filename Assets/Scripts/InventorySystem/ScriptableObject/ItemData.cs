@@ -7,4 +7,6 @@ public class ItemData : ScriptableObject
     public Sprite Icon;
     public bool IsStackable;
     public int MaxStack = 3;
+    public bool IsUsable;
+    public float RecoverAmout = 0;
 }

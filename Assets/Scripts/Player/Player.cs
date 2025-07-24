@@ -1,10 +1,15 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public static Player Instance;
     public float MovementSpeed;
+    public Image HealthBar;
+    public float TotalPlayerHealth;
+    public float CurrentPlayerHealth;
 
     [SerializeField] private Rigidbody2D _rigidBody;
     private Vector2 _direction;
@@ -25,6 +30,10 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+
+    private void Start() {
+        HealthBar.fillAmount = CurrentPlayerHealth / TotalPlayerHealth;
     }
 
     private void Update() {
@@ -69,5 +78,12 @@ public class Player : MonoBehaviour
         }
 
         OnPlayerMove?.Invoke();
+    }
+
+    public void OnItemUsed(Item item) {
+        if (!item.ItemData.IsUsable) { return; }
+        CurrentPlayerHealth += item.ItemData.RecoverAmout;
+
+        HealthBar.fillAmount = CurrentPlayerHealth / TotalPlayerHealth;
     }
 }

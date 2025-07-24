@@ -26,6 +26,11 @@ public class InventoryController : MonoBehaviour
 
         slot.GetComponent<InventorySlotHandler>().AddItem(itemGameObject);
 
+        if (itemGameObject.GetComponent<Item>().ItemData.IsUsable) {
+            itemGameObject.AddComponent<UsableItem>();
+            UsableItem.Instance.OnUsedItem += GameObject.FindWithTag("Player").GetComponent<Player>().OnItemUsed;
+        }
+
     }
 
     private GameObject TryToFindEmptySlot() {
