@@ -23,13 +23,15 @@ public class InventoryController : MonoBehaviour
     }
 
     public void AddItem(Item item) {
-        GameObject emptySlot = TryToFindEmptySlot();
-        if (emptySlot == null) { return; }
+        GameObject slot = TryToFindEmptySlot();
+        if (slot == null) { return; }
 
-        GameObject itemGameObject = Instantiate(ItemPrefab, emptySlot.transform);
+        GameObject itemGameObject = Instantiate(ItemPrefab, slot.transform);
         itemGameObject.GetComponent<Item>().ItemData = item.ItemData;
         itemGameObject.GetComponent<Image>().sprite = item.ItemData.Icon;
-        emptySlot.GetComponent<InventorySlotHandler>().SetEmptySlot(false);
+
+        slot.GetComponent<InventorySlotHandler>().AddItem(itemGameObject);
+
     }
 
     private GameObject TryToFindEmptySlot() {

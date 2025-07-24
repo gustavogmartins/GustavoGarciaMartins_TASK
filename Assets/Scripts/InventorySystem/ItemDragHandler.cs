@@ -18,10 +18,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler, IBe
         if (!_wasDropped) {
             this.gameObject.transform.SetParent(_currentSlot);
             this.gameObject.transform.localPosition = Vector3.zero;
-        } else {
-            this.gameObject.GetComponent<LayoutElement>().ignoreLayout = false;
-            _currentSlot.GetComponent<InventorySlotHandler>().SetEmptySlot(true);
-        }
+        } 
+
+        this.gameObject.GetComponent<LayoutElement>().ignoreLayout = false;
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
@@ -37,5 +36,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler, IBe
 
     public void SetDropped() {
         _wasDropped = true;
+    }
+
+    public Transform GetCurrentSlot() {
+        return _currentSlot;
     }
 }
