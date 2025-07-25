@@ -89,6 +89,9 @@ public class InventoryController : MonoBehaviour
                     itemComponent.ItemData = data;
                     item.GetComponent<Image>().sprite = data.Icon;
 
+                    UsableItem usable = item.AddComponent<UsableItem>();
+                    usable.OnUsedItem += GameObject.FindWithTag("Player").GetComponent<Player>().OnItemUsed;
+
                     var slot = item.transform.parent.GetComponent<InventorySlotHandler>();
                     slot.GetComponent<InventorySlotHandler>().AddItem(item);
                 }

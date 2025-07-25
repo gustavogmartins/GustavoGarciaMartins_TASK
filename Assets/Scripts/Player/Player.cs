@@ -85,5 +85,6 @@ public class Player : MonoBehaviour
         CurrentPlayerHealth += item.ItemData.RecoverAmout;
 
         HealthBar.fillAmount = CurrentPlayerHealth / TotalPlayerHealth;
+        Destroy(item.gameObject);
     }
 }
