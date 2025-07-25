@@ -2006,7 +2006,7 @@ Camera:
   far clip plane: 1000
   field of view: 70
   orthographic: 0
-  orthographic size: 1.05
+  orthographic size: 0.9475
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -29367,6 +29367,30 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: AllItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'AllItems.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 232a855a571fb114c98ca8c6dad44194, type: 2}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'AllItems.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3718e2e4342aa1847874ea7e391e4fae, type: 2}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'AllItems.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8901c70b00481944ab71c6d04394e325, type: 2}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'AllItems.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 5f45406ae1f690b44bb677fb90eccebd, type: 2}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: InventorySlots.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
       propertyPath: 'InventorySlot.Array.data[0]'
       value: 
       objectReference: {fileID: 1034883109}
@@ -29424,6 +29448,126 @@ PrefabInstance:
       objectReference: {fileID: 1599232482}
     - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
       propertyPath: 'InventorySlot.Array.data[14]'
+      value: 
+      objectReference: {fileID: 2020240147}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1034883109}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1628967467}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[2]'
+      value: 
+      objectReference: {fileID: 167124640}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[3]'
+      value: 
+      objectReference: {fileID: 796368991}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1649339020}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[5]'
+      value: 
+      objectReference: {fileID: 671767651}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[6]'
+      value: 
+      objectReference: {fileID: 781927061}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[7]'
+      value: 
+      objectReference: {fileID: 485797615}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[8]'
+      value: 
+      objectReference: {fileID: 1627702138}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[9]'
+      value: 
+      objectReference: {fileID: 102364973}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[10]'
+      value: 
+      objectReference: {fileID: 43198692}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[11]'
+      value: 
+      objectReference: {fileID: 127049422}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[12]'
+      value: 
+      objectReference: {fileID: 1009947042}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[13]'
+      value: 
+      objectReference: {fileID: 1599232482}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[14]'
+      value: 
+      objectReference: {fileID: 2020240147}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[15]'
+      value: 
+      objectReference: {fileID: 1034883109}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[16]'
+      value: 
+      objectReference: {fileID: 1628967467}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[17]'
+      value: 
+      objectReference: {fileID: 167124640}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[18]'
+      value: 
+      objectReference: {fileID: 796368991}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[19]'
+      value: 
+      objectReference: {fileID: 1649339020}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[20]'
+      value: 
+      objectReference: {fileID: 671767651}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[21]'
+      value: 
+      objectReference: {fileID: 781927061}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[22]'
+      value: 
+      objectReference: {fileID: 485797615}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[23]'
+      value: 
+      objectReference: {fileID: 1627702138}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[24]'
+      value: 
+      objectReference: {fileID: 102364973}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[25]'
+      value: 
+      objectReference: {fileID: 43198692}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[26]'
+      value: 
+      objectReference: {fileID: 127049422}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[27]'
+      value: 
+      objectReference: {fileID: 1009947042}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[28]'
+      value: 
+      objectReference: {fileID: 1599232482}
+    - target: {fileID: 4174516040041681798, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}
+      propertyPath: 'InventorySlots.Array.data[29]'
       value: 
       objectReference: {fileID: 2020240147}
     - target: {fileID: 4421657287986046658, guid: 2ecd359d2bf121f4b8ba224d2180b645, type: 3}

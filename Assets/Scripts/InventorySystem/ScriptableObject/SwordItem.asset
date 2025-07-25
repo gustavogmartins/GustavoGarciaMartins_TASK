@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52254c4c44256e148824e60eee5da1a1, type: 3}
   m_Name: SwordItem
   m_EditorClassIdentifier: 
+  ID: 2
   ItemName: Sword
   Icon: {fileID: 390774369, guid: 3f0b7bfd374973c419577b26a4504530, type: 3}
   IsStackable: 0
   MaxStack: 1
+  IsUsable: 0
+  RecoverAmout: 0

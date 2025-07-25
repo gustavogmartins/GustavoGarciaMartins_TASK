@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewItem", menuName = "Inventory/Item")]
 public class ItemData : ScriptableObject
 {
+    public string ID;
     public string ItemName;
     public Sprite Icon;
     public bool IsStackable;
